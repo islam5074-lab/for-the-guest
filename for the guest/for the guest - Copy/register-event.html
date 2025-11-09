@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="imges/logo.png" alt="University Logo" class="logo">
+    <h1>University Dashboard</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="dashboard.html" >Dashboard</a>
+    <a href="my-events.html">My Events</a>
+    <a href="register-event.html">Register Event</a>
+    <a href="calendar.html">Calendar</a>
+    <button class="signin-btn" onclick="logout()">Log Out</button>
+  </nav>
+<div class="content">
+  <h2>Register a New Event</h2>
+  <form>
+    <label>Event Name:</label><br>
+    <input type="text" ><br><br>
+
+    <label>Date:</label><br>
+    <input type="date"><br><br>
+
+    <label>Description:</label><br>
+    <textarea rows="4" ></textarea><br><br>
+
+    <button class="btn" type="submit">Submit Event</button>
+  </form>
+</div>
