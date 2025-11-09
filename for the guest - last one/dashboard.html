@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="imges/logo.png" alt="University Logo" class="logo">
+    <h1>University Dashboard</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="my-events.html">My Events</a>
+    <a href="register-event.html">Register Event</a>
+    <a href="calendar.html">Calendar</a>
+    <button class="signin-btn" onclick="logout()">Log Out</button>
+  </nav>
+  
+  <!-- Dashboard Section -->
+  <div class="content">
+    <h2>Welcome to Your Dashboard</h2>
+    <p>
+      This is your central control panel. You can view your registered events,
+      create new ones, and check upcoming activities on the university calendar.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>My Events</h3>
+        <p>See all the events you’ve registered for.</p>
+        <button class="btn" onclick="window.location.href='my-events.html'">View Events</button>
+      </div>
+
+      <div class="card">
+        <h3>Register Event</h3>
+        <p>Submit new university events for approval.</p>
+        <button class="btn" onclick="window.location.href='register-event.html'">Register Now</button>
+      </div>
+
+      <div class="card">
+        <h3>Calendar</h3>
+        <p>See upcoming university events and activities.</p>
+        <button class="btn" onclick="window.location.href='calendar.html'">View Calendar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+     <iframe src="footer.html" class="footer-frame" scrolling="no"></iframe>
+
+
+  <script>
+    function logout() {
+      alert("You have successfully logged out!");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

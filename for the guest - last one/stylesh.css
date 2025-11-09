@@ -1,0 +1,94 @@
+body {
+  background-color: #f5f6fa;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+/* 🔹 Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 220px; /* بعد السايدبار */
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100vh;
+  background-color: #343a40;
+  color: #fff;
+  padding-top: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+}
+.sidebar a {
+  color: #ccc;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #495057;
+  color: #fff;
+}
+
+/* Content area */
+.main-content {
+  margin-left: 220px;
+  padding: 100px 20px 20px; /* ↑ مساحة تحت الهيدر */
+}
+
+/* Navbar (اختياري داخل المحتوى) */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+/* Cards & tables */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ===== Logout Button ===== */
+.logout-btn {
+  margin-left: auto; /* يخلي الزر يروح لليمين */
+  background-color: #dc3545; /* أحمر لطيف */
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}

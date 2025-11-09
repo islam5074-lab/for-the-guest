@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+    <img src="imges/logo.png" alt="University Logo" class="logo">
+    <h1>Sing up</h1>
+  </header>
+    <!-- Sign Up Form -->
+  <div class="register-form">
+    <h2>Create Your Account</h2>
+
+    <form onsubmit="return signUpUser(event)">
+      <label>Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label>Password:</label>
+      <input type="password" id="password" placeholder="Create a password" required>
+
+      <label>Confirm Password:</label>
+      <input type="password" id="confirm" placeholder="Confirm your password" required>
+
+      <button type="submit">Sign Up</button>
+
+      <p class="toggle">
+        Already have an account? <a href="login.html">Log In</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- Footer -->
+    <iframe src="footer.html" class="footer-frame" scrolling="no"></iframe>
+
+
+  <script>
+    function signUpUser(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+
+      if (password !== confirm) {
+        alert("Passwords do not match!");
+        return false;
+      }
+
+      alert(`Welcome, ${username}! Your account has been created successfully.`);
+      window.location.href = "dashboard.html";
+    }
+  </script>
+
+</body>
+</html>

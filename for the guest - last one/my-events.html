@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="imges/logo.png" alt="University Logo" class="logo">
+    <h1>University Dashboard</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="dashboard.html" >Dashboard</a>
+    <a href="my-events.html">My Events</a>
+    <a href="register-event.html">Register Event</a>
+    <a href="calendar.html">Calendar</a>
+    <button class="signin-btn" onclick="logout()">Log Out</button>
+  </nav>
+
+<div class="content">
+  <h2>My Events</h2>
+  <p>Here you can see all the events you have registered for.</p>
+
+  <table>
+    <tr><th>Event Name</th><th>Date</th><th>Status</th></tr>
+    <tr><td>Research Conference</td><td>Jan 15, 2025</td><td>Approved</td></tr>
+    <tr><td>Guest Lecture</td><td>Feb 10, 2025</td><td>Pending</td></tr>
+  </table>
+</div>
+ <script>
+    function logout() {
+      alert("You have successfully logged out!");
+      window.location.href = "login.html";
+    }
+  </script>
+     <iframe src="footer.html" class="footer-frame" scrolling="no"></iframe>
+
+</body>
+</html>

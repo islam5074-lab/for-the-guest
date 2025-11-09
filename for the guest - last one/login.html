@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+    <img src="imges/logo.png" alt="University Logo" class="logo">
+    <h1>University Log in</h1>
+  </header>
+
+  <!-- Login Form -->
+  <div class="login-form">
+    <h2>Login to Your Account</h2>
+
+    <form onsubmit="return loginUser(event)">
+      <label>Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label>Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <button type="submit">Log In</button>
+    </form>
+
+    <button type="button" id="guestBtn" class="btn" style="margin-top:15px;"
+      onclick="loginGuest()">Login as Guest</button>
+
+    <p class="toggle">
+      Don’t have an account? <a href="sign-up.html">Sign Up</a>
+    </p>
+  </div>
+    <iframe src="footer.html" class="footer-frame" scrolling="no"></iframe>
+
+
+  <script>
+    function loginUser(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim().toLowerCase();
+      const password = document.getElementById("password").value.trim();
+
+      // --- ADMIN LOGIN ---
+      if (username === "admin" && password === "12345") {
+        alert("Welcome, Admin! Redirecting to dashboard...");
+        window.location.href = "admin dashboard.html";
+        return;
+      }
+
+      // --- NORMAL USER LOGIN ---
+      if (username === "user" && password === "12345") {
+        alert("Welcome, User! Redirecting to your events...");
+        window.location.href = "dashboard.html";
+        return;
+      }
+
+      // --- INVALID LOGIN ---
+      alert("Incorrect username or password. Try again.");
+    }
+
+    function loginGuest() {
+      alert("Welcome, Guest! Redirecting to homepage...");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
